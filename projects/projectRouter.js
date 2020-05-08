@@ -11,6 +11,14 @@ router.post("/", (req, res) => {
     .catch(err => res.status(500).json({message: "error connecting to database"}))
 })
 
+router.post("/:id/actions", validateProjectId, (req, res) => {
+    const action = req.body
+    action.project_id = req.params.id
+    actionsdb.insert(action)
+    .then(result => res.status(201).send())
+    .catch(err => res.status(500).json({message: "error connecting to database"}))
+})
+
 router.get("/", (req, res) => {
     db.get()
     .then(result => res.status(200).json(result))
@@ -52,10 +60,6 @@ function validateProjectId(req, res, next) {
     })
     .catch(err => res.status(500).json({message: "error connecting to database"}))
 }
-
-
-
-
 
 
 

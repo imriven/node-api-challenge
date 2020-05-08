@@ -11,7 +11,7 @@ server.get('/', (req, res) => {
 });
 // logger before router
 server.use("/api/projects", projectRouter) 
-//server.use("/api/actions", actionRouter) 
+server.use("/api/actions", actionRouter) 
 //custom middleware
 //logger should be first after express.json - executed in order
 
