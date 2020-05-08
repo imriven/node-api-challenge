@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+We learned about routers and servers but also middleware... I'm not too sure what parts this is pointing towards...
+
 - [ ] Describe Middleware?
+
+It's a callback function that intercepts and runs before allowing other functions to run. So it intercepts other functions and run before completing that function.
 
 - [ ] Describe a Resource?
 
+Its a system where the concept applies using the RESTful API model. You want to arrange an API in an easy to use way that is well thought out and makes sense. Its the difference between what makes a good API and a hard to use bad API
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+It can return a status to let them know if a request was successful or unsuccessful
+
 - [ ] How can we partition our application into sub-applications?
+
+We set up routes that make sense. We don't want to set up routes that are too convoluted or all together on one page or route. 
 
 ## Minimum Viable Product
 
